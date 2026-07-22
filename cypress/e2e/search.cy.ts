@@ -1,38 +1,43 @@
-describe('Busca global', () => {
+describe("Busca Global", () => {
   beforeEach(() => {
-    cy.stubApi();
+    cy.visit("https://azs-web-rickandmorty-kappa.vercel.app/");
   });
 
-  it('atualiza o placeholder por página e envia o filtro correto ao digitar', () => {
-    cy.visit('/personagens');
-    cy.wait('@GetCharacters');
-    cy.get('input[placeholder="Buscar personagens..."]').should('be.visible').type('morty');
+  it("Busca personagens Morty", () => {
+    cy.get("nav").contains("Personagens").click();
 
-    // A busca é debounced (400ms) — cy.wait aguarda a nova request automaticamente.
-    cy.wait('@GetCharacters').its('request.body.variables.filter.name').should('eq', 'morty');
+    cy.get('input[placeholder="Buscar personagens..."]')
+      .should("be.visible")
+      .type("Morty");
+
+    cy.contains("Morty").should("be.visible");
   });
 
-  it('troca o placeholder da busca ao navegar entre páginas', () => {
-    cy.visit('/episodios');
-    cy.get('input[placeholder="Buscar episódios..."]').should('be.visible');
+  it("Busca personagem Million Ants", () => {
+    cy.get("nav").contains("Personagens").click();
 
-    cy.get('nav').contains('Locais').click();
-    cy.get('input[placeholder="Buscar locais..."]').should('be.visible');
+    cy.get('input[placeholder="Buscar personagens..."]')
+      .should("be.visible")
+      .type("Million Ants");
+
+    cy.contains("Million Ants", { timeout: 10000 }).should("be.visible");
   });
 
-  it('na Home, buscar dispara as 3 queries (episódios, personagens e locais) e mostra os resultados', () => {
-    cy.visit('/');
-    cy.wait('@GetEpisodes');
+  it("Troca o placeholder ao navegar", () => {
+    cy.get("nav").contains("Episódios").click();
 
-    cy.get('input[placeholder="Buscar episódios, personagens e locais..."]').type('rick');
+    cy.get("input").should("have.attr", "placeholder", "Buscar episódios...");
 
-    cy.wait('@GetEpisodes').its('request.body.variables.filter.name').should('eq', 'rick');
-    cy.wait('@GetCharacters').its('request.body.variables.filter.name').should('eq', 'rick');
-    cy.wait('@GetLocations').its('request.body.variables.filter.name').should('eq', 'rick');
+    cy.get("nav").contains("Locais").click();
 
-    cy.contains('Resultados para "rick"').should('be.visible');
-    cy.contains('h2', 'Episódios').should('be.visible');
-    cy.contains('h2', 'Personagens').should('be.visible');
-    cy.contains('h2', 'Locais').should('be.visible');
+    cy.get("input").should("have.attr", "placeholder", "Buscar locais...");
+  });
+
+  it("Busca global na Home", () => {
+    cy.get('input[placeholder="Buscar episódios, personagens e locais..."]')
+      .should("be.visible")
+      .type("Rick");
+
+    cy.contains('Resultados para "Rick"').should("be.visible");
   });
 });

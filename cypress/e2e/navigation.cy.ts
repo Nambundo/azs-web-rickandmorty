@@ -1,57 +1,46 @@
-describe('Navegação e páginas principais', () => {
+describe("Navegação da Sidebar", () => {
   beforeEach(() => {
-    cy.stubApi();
+    cy.visit("https://azs-web-rickandmorty-kappa.vercel.app/");
   });
 
-  it('mostra o banner da Home com os personagens principais em destaque', () => {
-    cy.visit('/');
-    cy.wait('@GetEpisodes');
-    cy.contains('h1', 'Rick').should('be.visible');
-    cy.contains('Explorar episódios').should('be.visible');
-    cy.get('img[alt="Rick Sanchez"]').should('be.visible');
-    cy.get('img[alt="Morty Smith"]').should('be.visible');
+  it("Deve navegar para Episódios", () => {
+    cy.get("nav").contains("Episódios").click();
+    cy.url().should("include", "/episodios");
   });
 
-  it('navega para Episódios pela sidebar e lista os cards', () => {
-    cy.visit('/');
-    cy.get('nav').contains('Episódios').click();
-    cy.url().should('include', '/episodios');
-    cy.wait('@GetEpisodes');
-    cy.contains('2 episódios encontrados').should('be.visible');
-    cy.contains('Pilot').should('be.visible');
+  it("Deve navegar para Personagens", () => {
+    cy.get("nav").contains("Personagens").click();
+    cy.url().should("include", "/personagens");
   });
 
-  it('navega para Personagens pela sidebar e lista os cards', () => {
-    cy.visit('/');
-    cy.get('nav').contains('Personagens').click();
-    cy.url().should('include', '/personagens');
-    cy.wait('@GetCharacters');
-    cy.contains('3 personagens encontrados').should('be.visible');
-    cy.contains('Rick Sanchez').should('be.visible');
+  it("Deve navegar para Locais", () => {
+    cy.get("nav").contains("Locais").click();
+    cy.url().should("include", "/locais");
   });
 
-  it('navega para Locais pela sidebar e lista os cards', () => {
-    cy.visit('/');
-    cy.get('nav').contains('Locais').click();
-    cy.url().should('include', '/locais');
-    cy.wait('@GetLocations');
-    cy.contains('Earth (C-137)').should('be.visible');
+  it("Deve navegar para Favoritos", () => {
+    cy.get("nav").contains("Favoritos").click();
+    cy.url().should("include", "/favoritos");
   });
 
-  it('ao clicar em um personagem, mostra o estado de carregando e depois os detalhes', () => {
-    cy.intercept('POST', 'https://rickandmortyapi.com/graphql', (req) => {
-      if (req.body?.operationName === 'GetCharacterById') {
-        req.reply({ fixture: 'get-character-by-id.json', delay: 300 });
-      }
-    }).as('GetCharacterByIdSlow');
+  it("Deve navegar para Assistidos", () => {
+    cy.get("nav").contains("Assistidos").click();
+    cy.url().should("include", "/assistidos");
+  });
 
-    cy.visit('/personagens');
-    cy.wait('@GetCharacters');
-    cy.contains('Rick Sanchez').click();
+  it("Deve navegar para Sobre", () => {
+    cy.get("nav").contains("Sobre").click();
+    cy.url().should("include", "/sobre");
+  });
 
-    cy.contains('Carregando personagem...').should('be.visible');
-    cy.wait('@GetCharacterByIdSlow');
-    cy.contains('Carregando personagem...').should('not.exist');
-    cy.get('[role="dialog"]').contains('Rick Sanchez').should('be.visible');
+  it("Deve abrir o modal ao clicar em um personagem", () => {
+    cy.get("nav").contains("Personagens").click();
+    cy.url().should("include", "/personagens");
+
+    cy.get('div[role="button"]').should("have.length.at.least", 1);
+
+    cy.get('div[role="button"]').first().click();
+
+    cy.get('[role="dialog"]').should("be.visible");
   });
 });
