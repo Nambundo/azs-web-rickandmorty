@@ -3,8 +3,10 @@
 ## 🛸 Rick and Morty : Aplicação para explorar o universo de Rick and Morty — construída com, consumindo a [API GraphQL oficial](https://rickandmortyapi.com/graphql).
 
 **🔗 Deploy na vercel:** [azs-web-rickandmorty-kappa.vercel.app](https://azs-web-rickandmorty-kappa.vercel.app/)
-<img width="400" height="225" alt="Sequência 01_1 (1)" src="https://github.com/user-attachments/assets/3f4e3f9e-e13b-46c6-a1ad-36aee39f2b2c" />
-</div>
+
+
+https://github.com/user-attachments/assets/abaac8e5-f4bf-4c27-9cd4-814daacb9e9f
+
 
 ---
 
