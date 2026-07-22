@@ -1,6 +1,6 @@
 
 # Desafio AZShip Front-end Web
-## 🛸 Rick and Morty : Aplicação para explorar o universo de Rick and Morty — construída com, consumindo a [API GraphQL oficial](https://rickandmortyapi.com/graphql).
+## 🛸 Rick and Morty : Aplicação para explorar o universo de Rick and Morty, consumindo a [API GraphQL oficial](https://rickandmortyapi.com/graphql).
 
 **🔗 Deploy na vercel:** [azs-web-rickandmorty-kappa.vercel.app](https://azs-web-rickandmorty-kappa.vercel.app/)
 
