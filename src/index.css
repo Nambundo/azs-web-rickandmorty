@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --color-purple-primary: #7c3aed;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(147, 51, 234, 0.4) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 0px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(147, 51, 234, 0.4);
+  border-radius: 8px;
+}
+
+body {
+  background-color: #07070f;
+  color: #fff;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* esconde a scrollbar dos carrosséis horizontais */
+.overflow-x-auto::-webkit-scrollbar {
+  display: none;
+}

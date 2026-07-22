@@ -1,0 +1,30 @@
+{
+  "data": {
+    "charactersByIds": [
+      {
+        "id": "1",
+        "name": "Rick Sanchez",
+        "status": "Alive",
+        "species": "Human",
+        "type": "",
+        "gender": "Male",
+        "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+        "origin": { "id": "1", "name": "Earth (C-137)" },
+        "location": { "id": "3", "name": "Citadel of Ricks" },
+        "created": "2017-11-04T18:48:46.250Z"
+      },
+      {
+        "id": "2",
+        "name": "Morty Smith",
+        "status": "Alive",
+        "species": "Human",
+        "type": "",
+        "gender": "Male",
+        "image": "https://rickandmortyapi.com/api/character/avatar/2.jpeg",
+        "origin": { "id": "1", "name": "Earth (C-137)" },
+        "location": { "id": "3", "name": "Citadel of Ricks" },
+        "created": "2017-11-04T18:50:21.651Z"
+      }
+    ]
+  }
+}

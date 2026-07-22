@@ -1,0 +1,15 @@
+{
+  "data": {
+    "episode": {
+      "id": "1",
+      "name": "Pilot",
+      "air_date": "December 2, 2013",
+      "episode": "S01E01",
+      "created": "2017-11-10T12:56:33.798Z",
+      "characters": [
+        { "id": "1", "name": "Rick Sanchez", "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg" },
+        { "id": "2", "name": "Morty Smith", "image": "https://rickandmortyapi.com/api/character/avatar/2.jpeg" }
+      ]
+    }
+  }
+}
