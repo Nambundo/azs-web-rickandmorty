@@ -1,10 +1,10 @@
 <div align="center">
 
-# 🛸 Rick and Morty Explorer
+# 🛸 Rick and Morty 
 
-Aplicação premium (estilo Netflix / Linear) para explorar o universo de Rick and Morty — construída com **React**, **TypeScript**, **GraphQL** e **Tailwind CSS**, consumindo a [API GraphQL oficial](https://rickandmortyapi.com/graphql).
+Aplicação para explorar o universo de Rick and Morty — construída com, consumindo a [API GraphQL oficial](https://rickandmortyapi.com/graphql).
 
-**🔗 Demo ao vivo:** [azs-web-rickandmorty-kappa.vercel.app](https://azs-web-rickandmorty-kappa.vercel.app/)
+**🔗 Deploy na vercel:** [azs-web-rickandmorty-kappa.vercel.app](https://azs-web-rickandmorty-kappa.vercel.app/)
 
 </div>
 
