@@ -1,8 +1,5 @@
-<div align="center">
-
-# 🛸 Rick and Morty 
-
-Aplicação para explorar o universo de Rick and Morty — construída com, consumindo a [API GraphQL oficial](https://rickandmortyapi.com/graphql).
+# Desafio AZShip Front-end Web
+## 🛸 Rick and Morty : Aplicação para explorar o universo de Rick and Morty — construída com, consumindo a [API GraphQL oficial](https://rickandmortyapi.com/graphql).
 
 **🔗 Deploy na vercel:** [azs-web-rickandmorty-kappa.vercel.app](https://azs-web-rickandmorty-kappa.vercel.app/)
 
@@ -118,8 +115,6 @@ npm run test:e2e
 
 Resumo: Testamos a Home, a navegação entre páginas e o funcionamento da busca global.
 
-> Na primeira execução, o Cypress baixa seu binário automaticamente (requer internet). Se isso falhar por proxy/firewall corporativo, configure `CYPRESS_DOWNLOAD_MIRROR` ou consulte a [documentação oficial](https://docs.cypress.io/app/references/advanced-installation).
-
 ## 🎭 Sobre os dados mockados
 
 A API GraphQL pública do Rick and Morty **não retorna** alguns campos que aparecem na UI. Eles são gerados de forma **determinística por ID** (o mesmo item sempre mostra o mesmo valor, mesmo depois de recarregar a página):
@@ -148,5 +143,3 @@ Basta editar `src/mocks/mockData.ts` para trocar por uma fonte de dados real no 
 <div align="center">
 
 Dados fornecidos pela [Rick and Morty API](https://rickandmortyapi.com) · Rick and Morty © 2013–presente, todos os direitos reservados aos seus respectivos donos.
-
-</div>
