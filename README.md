@@ -25,14 +25,46 @@
 <img width="1890" height="906" alt="testes_e2e" src="https://github.com/user-attachments/assets/df00e059-8115-4d2b-a8da-b1012fb6d88e" />
 
 ## ✨ Funcionalidades
+---
+## 🏠 Home
+- Banner e conteúdos em destaque.
+- Carrosséis de episódios, personagens e locais.
+- Acesso rápido aos detalhes.
 
-- Explorar **episódios**, **personagens** e **locais** com dados reais via GraphQL
-- **Busca global** no header — funciona em todas as páginas, incluindo busca combinada (episódios + personagens + locais) na tela Explorar
-- **Favoritos** e **Assistidos** com persistência local (`localStorage`), sem precisar de login
-- Modais de detalhe para episódio, personagem e local, com estado de carregamento animado
-- Cards de episódio compostos com **fotos reais dos personagens** daquele episódio
-- Totalmente responsivo (desktop, tablet e mobile)
-- Dark mode fixo, com identidade visual consistente em toda a aplicação
+## 🔎 Explorar / Pesquisar
+- Busca por episódios, personagens e locais.
+- Filtros e navegação pelos conteúdos.
+
+## 🎬 Episódios
+- Lista de episódios e mais avaliados.
+- Busca por temporada e episódio.
+- Modal com: sinopse, data, avaliação, roteiro, direção e personagens.
+- Ações: assistir, favoritar e marcar como assistido.
+
+## 👤 Personagens
+- Pesquisa e visualização dos personagens.
+- Modal com: espécie, gênero, origem, status e episódios.
+- Ações: favoritar e marcar como assistido.
+
+## 🌍 Locais
+- Busca e paginação dos locais.
+- Modal com informações do local e personagens relacionados.
+- Ações: favoritar e marcar como explorado.
+
+## ⭐ Favoritos
+- Centraliza episódios, personagens e locais favoritos.
+- Permite visualizar detalhes e remover favoritos.
+
+## ✅ Assistidos
+- Gerencia conteúdos assistidos.
+- Permite consultar detalhes e atualizar estado.
+
+## 🪟 Modal de Detalhes
+- Exibe informações completas sem sair da página.
+- Ações rápidas: favoritar e assistir.
+
+## ℹ️ Sobre
+- Informações da série e explicação da organização da aplicação.
 
 ## 🧱 Stack
 
